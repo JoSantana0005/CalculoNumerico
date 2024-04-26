@@ -43,7 +43,3 @@ if(len(dni) == 8 and nombre.isalpha() == True):
 else:
     print("Se equivoco colocando un dato")
    
-
-
-    
-        
