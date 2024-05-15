@@ -28,7 +28,7 @@ def main(page:ft.Page):
         page.update()
     def agregar_datos(e):
         #Genero una matriz con random
-        matr = [[np.random.randint(1,999) for i in range(int(tamMatriz.value))] for i in range(int(tamMatriz.value))]
+        matr = [[np.random.randint(1,500) for i in range(int(tamMatriz.value))] for i in range(int(tamMatriz.value))]
         #matr se lo paso Matriz que representa un textField
         matriz.value = str(matr)
         #Busco la ultima colunma y se le asigno a 
