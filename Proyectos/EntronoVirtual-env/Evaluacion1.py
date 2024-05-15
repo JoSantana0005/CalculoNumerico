@@ -1,5 +1,4 @@
 import flet as ft
-import ParteII
 def main(page:ft.Page):
     #Diseño de la pagina
     page.window_width = "500"
