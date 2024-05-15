@@ -1,5 +1,6 @@
 import flet as ft
 import numpy as np
+import Evaluacion1
 def main(page:ft.Page):
     #Diseño de la interfaz
     page.window_width = "1000"
