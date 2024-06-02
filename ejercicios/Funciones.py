@@ -24,7 +24,6 @@ def NormaMatricialen2d(x1):
 def NormaVectorialen3d(x1,x2,x0,x3):
     erra = x3-x2-x1
     dist = np.sqrt(erra**2)
-    print(dist)
     fig = plt.figure()
     graf = fig.add_subplot(111, projection= "3d")
     [x,y,z] = x0
