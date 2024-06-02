@@ -1,10 +1,12 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
+
+#Funcion que realiza el numero de condiciones de una matriz
 def numerosdecondiciones(matriz):
     n = np.linalg.cond(matriz)
     return n
-
+#Funcion que grafica la norma vectorial de dos vectores en dos dimensioenes
 def NormadeVectoren2d(x1,x2):
     norma = np.linalg.norm(x2-x1)
     print(norma)
@@ -12,15 +14,14 @@ def NormadeVectoren2d(x1,x2):
     plt.title("Norma del vector: {:3f}".format(norma))
     plt.legend()
     plt.show()
-
+#Funcion que grafica la norma matricial de una matriz  en dos dimensioenes
 def NormaMatricialen2d(x1):
     norma = np.linalg.norm(x1)
     plt.plot([0,norma], label="Norma")
     plt.title("Norma de la matriz:  {:3f}".format(norma))
     plt.legend()
     plt.show()
-
-
+#Funcion que grafica la norma vectorial de cuatro vectores en tres dimensioenes
 def NormaVectorialen3d(x1,x2,x0,x3):
     erra = x3-x2-x1
     dist = np.sqrt(erra**2)
@@ -58,7 +59,7 @@ def NormaVectorialen3d(x1,x2,x0,x3):
     z = linea[:,2]
     graf.plot(x,y,z, label= "X2")
     plt.show()
-
+#Funcion que grafica la norma matricial de una matriz en tres dimensioenes
 def NormaMatricialen3d(matriz):
     norma = np.linalg.norm(matriz)
     fig = plt.figure()
