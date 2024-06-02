@@ -1,8 +1,12 @@
 import Funciones
 import numpy as np
 import random
+
+
 #Programa principal
+
 i = 1
+# Realicen un while para que fuera mas funcional el programa
 while(i < 5):
     condi = random.randint(1,5)
     if(condi == 1):
