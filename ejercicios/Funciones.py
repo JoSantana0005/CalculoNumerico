@@ -60,3 +60,69 @@ def NormaVectorialen3d(x1,x2,x0,x3):
     graf.plot(x,y,z, label= "X2")
     plt.show()
 
+def NormaMatricialen3d(matriz):
+    norma = np.linalg.norm(matriz)
+    fig = plt.figure()
+    graf = fig.add_subplot(111, projection = "3d")
+    [x,y,z] = matriz[:,0,0]
+    graf.scatter(x,y,z, c= "Orange", label= "0,0")
+    [x,y,z] = matriz[:,0,1]
+    graf.scatter(x,y,z, c= "Blue", label= "0,1")
+    [x,y,z] = matriz[:,0,2]
+    graf.scatter(x,y,z, c= "green", label= "0,2")
+    [x,y,z] = matriz[:,1,0]
+    graf.scatter(x,y,z, c= "black", label= "1,0")
+    [x,y,z] = matriz[:,1,1]
+    graf.scatter(x,y,z, c= "brown", label= "1,1")
+    [x,y,z] = matriz[:,1,2]
+    graf.scatter(x,y,z, c= "gray", label= "1,2")
+    [x,y,z] = matriz[:,2,0]
+    graf.scatter(x,y,z, c= "pink", label= "2,0")
+    [x,y,z] = matriz[:,2,1]
+    graf.scatter(x,y,z, c= "violet", label= "2,1")
+    [x,y,z] = matriz[:,2,2]
+    graf.scatter(x,y,z, c= "violet", label= "2,1")
+    linea = np.concatenate(([matriz[:,0,0]],[matriz[:,0,1]]), axis = 0)
+    x = linea[:,0]
+    y = linea[:,1]
+    z = linea[:,2]
+    graf.plot(x,y,z, label= "matriz[0][0]")
+    linea = np.concatenate(([matriz[:,0,1]],[matriz[:,0,2]]), axis = 0)
+    x = linea[:,0]
+    y = linea[:,1]
+    z = linea[:,2]
+    graf.plot(x,y,z, label= "matriz[0][1]")
+    linea = np.concatenate(([matriz[:,0,2]],[matriz[:,1,0]]), axis = 0)
+    x = linea[:,0]
+    y = linea[:,1]
+    z = linea[:,2]
+    graf.plot(x,y,z, label= "matriz[0][2]")
+    linea = np.concatenate(([matriz[:,1,0]],[matriz[:,1,1]]), axis = 0)
+    x = linea[:,0]
+    y = linea[:,1]
+    z = linea[:,2]
+    graf.plot(x,y,z, label= "matriz[1][0]")
+    linea = np.concatenate(([matriz[:,1,1]],[matriz[:,1,2]]), axis = 0)
+    x = linea[:,0]
+    y = linea[:,1]
+    z = linea[:,2]
+    graf.plot(x,y,z, label= "matriz[1][1]")
+    linea = np.concatenate(([matriz[:,1,2]],[matriz[:,2,0]]), axis = 0)
+    x = linea[:,0]
+    y = linea[:,1]
+    z = linea[:,2]
+    graf.plot(x,y,z, label= "matriz[1][2]")
+    linea = np.concatenate(([matriz[:,2,0]],[matriz[:,2,1]]), axis = 0)
+    x = linea[:,0]
+    y = linea[:,1]
+    z = linea[:,2]
+    graf.plot(x,y,z, label= "matriz[2][0]")
+    linea = np.concatenate(([matriz[:,2,1]],[matriz[:,2,2]]), axis = 0)
+    x = linea[:,0]
+    y = linea[:,1]
+    z = linea[:,2]
+    graf.plot(x,y,z, label= "matriz[2][1]")
+    graf.set_xlabel("Eje X")
+    graf.set_ylabel("Eje Y")
+    graf.set_zlabel("Eje z")
+    plt.show()
